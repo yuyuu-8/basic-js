@@ -21,14 +21,11 @@ function getMatrixElementsSum(matrix) {
   const rows = matrix.length;
   const cols = matrix[0].length;
 
-  // Iterate through each column
   for (let col = 0; col < cols; col++) {
     for (let row = 0; row < rows; row++) {
-      // If the current element is below a 0, skip it
       if (row > 0 && matrix[row - 1][col] === 0) {
         continue;
       }
-      // Add the current element to the sum
       sum += matrix[row][col];
     }
   }
